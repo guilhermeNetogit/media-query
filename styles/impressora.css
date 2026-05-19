@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*Estilo para impressão*/
+
+* {
+    margin: 10px;
+    padding: 10px;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-indent: 50px;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+i#i_menu {
+    display: none;
+}
+
+menu {
+    display: none;
+}
+
+article {
+    width: 100%;
+}
+
+article::after {
+    content: 'Artigo impresso como parte de um exercicio sobre media queries.';
+}
