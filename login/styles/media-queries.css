@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/*
+    Typical Device Breakpoints
+    Pequenas telas: até 480px;
+    Smartphone: de 481px até 768px;
+    Tablet: de 769px até 1024px;
+    Desktop: de 1025px até 1280px;
+    Grandes telas: acima de 1200px;
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {/*Tablet*/
+
+    body {
+        background-image: linear-gradient(to bottom, #66cc66, #466180);
+    }
+
+    section#login {
+        width: 90vw;
+        display: flex;
+        align-items: center;
+    }
+
+    section#login > div#imagem {
+        /*float: left;*/
+        width: 40%;
+        height: 100%;
+    }
+
+    section#login > div#formulario {
+        /*float: right;*/
+        width: 60%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Centraliza horizontalmente o h1, p e form */
+        height: 100%;
+        padding: 20px;
+    }
+
+    /* Garante que as tags internas ocupem a largura correta após a centralização */
+    div#formulario > p {
+        text-align: center; /* Centraliza o texto de boas-vindas */
+        margin-bottom: 15px;
+    }
+
+    section#login div#formulario > form {
+        width: 100%; /* Faz o formulário ocupar toda a largura disponível do bloco centralizado */
+        max-width: 375px; /* Evita que os campos estiquem demais em telas largas de tablet */
+    }
+}
+
+@media screen and (min-width: 1024px) { /*Telas grandes*/
+
+    body {
+        background-image: linear-gradient(to bottom, #66cc66, #466080);
+    }
+
+    section#login {
+        width: 992px;
+        /* Ativa o Flexbox e inverte a ordem: formulário na esquerda, imagem na direita */
+        display: flex;
+        flex-direction: row-reverse; 
+        align-items: center;
+    }
+
+    section#login > div#imagem {
+        /* Remove o float antigo */
+        width: 50%;
+        height: 100%;
+    }
+
+    section#login > div#formulario {
+        /* Remove o float, ativa Flexbox interno e centraliza todo o conteúdo */
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 40px; /* Mais espaço interno para telas grandes */
+    }
+
+    div#formulario > h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    div#formulario > p {
+        font-size: 1.2em;
+        text-align: center; /* Centraliza o texto de boas-vindas */
+        margin-bottom: 20px;
+    }
+
+    /* Limita o tamanho dos campos para não esticarem demais no monitor */
+    section#login div#formulario > form {
+        width: 100%;
+        max-width: 350px; 
+    }
+}
